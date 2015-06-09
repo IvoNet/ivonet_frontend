@@ -1,6 +1,33 @@
 {
   "name": "ivonet",
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "description": "Frontend for IvoNet.nl",
+  "main": "dist/index.html",
+  "directories": {
+    "couch_db": "couch_db",
+    "dist": "dist",
+    "e2e": "e2e",
+    "gulp": "gulp",
+    "src": "src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/IvoNet/ivonet_frontend.git"
+  },
+  "keywords": [
+    "IvoNet.nl",
+    "IvoNet.it",
+    "bliki",
+    "wiki",
+    "blog",
+    "geek"
+  ],
+  "author": "Ivo Woltring",
+  "license": "Apache 2.0",
+  "bugs": {
+    "url": "https://github.com/IvoNet/ivonet_frontend/issues"
+  },
+  "homepage": "http://www.ivonet.nl",
   "dependencies": {},
   "devDependencies": {
     "browser-sync": "~2.7.7",
