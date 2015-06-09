@@ -1,0 +1,58 @@
+.mm-editor {
+    min-height: 80vh;
+}
+
+.mm-editor textarea {
+    box-sizing: border-box;
+    height: 80vh;
+    resize: vertical;
+    margin: 0;
+    padding: 1px;
+}
+
+.markdown-preview {
+    box-sizing: border-box;
+    height: 82vh;
+    overflow-y: scroll;
+    background-color: #E8EAF6;
+    //background-color: #3F51B5;
+}
+
+.markdown-preview img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.image-container {
+    width: 300px;
+    max-height: 300px;
+}
+
+.image-container img {
+    width: 100%;
+    max-height: 90%;
+}
+
+.markdown-preview table, th {
+    border: solid #000000 1pt;
+    border-collapse: collapse;
+    padding: 3px;
+    margin: 0;
+}
+
+.markdown-preview th {
+    background-color: grey;
+    color: antiquewhite;
+}
+
+.markdown-preview table tr {
+    line-height: 1em;
+}
+
+.markdown-preview table tr td {
+    border: solid #000000 1pt;
+}
+
+.markdown-preview table tr td p {
+    line-height: 0.5em;
+}

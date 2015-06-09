@@ -1,0 +1,21 @@
+<md-dialog aria-label="login" ng-controller="SignupLoginController as loginctrl" class="login-dialog">
+    <form>
+        <md-dialog-content class="sticky-container">
+            <md-subheader class="md-sticky-no-effect">Login</md-subheader>
+            <md-input-container>
+                <label>Username</label>
+                <input type="text" ng-model="loginctrl.username">
+            </md-input-container>
+            <md-input-container>
+                <label>Password</label>
+                <input type="password" ng-model="loginctrl.password">
+            </md-input-container>
+            <div class="md-actions" layout="row">
+              <span flex></span>
+              <md-button ng-click="loginctrl.login()" class="md-primary">
+               login
+              </md-button>
+            </div>
+        </md-dialog-content>
+    </form>
+</md-dialog>

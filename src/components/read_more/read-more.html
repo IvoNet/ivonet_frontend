@@ -1,0 +1,9 @@
+<p>{{text | readMoreFilter:countingWords:textLength }}
+
+    <md-button ng-show='showLinks' ng-click="changeLength()" class="md-icon-button" aria-label="More">
+        <ng-md-icon ng-if="collapsed" icon="more_horiz" class="md-mini" size="15" ></ng-md-icon>
+        <ng-md-icon ng-if="!collapsed" icon="unfold_less" class="md-mini" size="15"></ng-md-icon>
+    </md-button>
+<!--<strong ng-show='!collapsed'>  Show&nbsp;less</strong>-->
+<!--<strong ng-show='collapsed'>  Show&nbsp;more</strong>-->
+</p>

@@ -1,0 +1,105 @@
+<view-title>{{bliki.title}}</view-title>
+<meta view-head name="description" content="{{bliki.description}}">
+<meta view-head name="author" content="Ivo Woltring">
+<meta view-head name="keywords" content="{{bliki.keywords}}">
+
+
+
+<div layout="column" layout-fill>
+    <section layout="row" flex layout-fill>
+        <!-- Main content -->
+        <md-content flex>
+            <md-toolbar>
+                <div class="md-toolbar-tools">
+                    <md-button class="md-icon-button md-default-theme" aria-label="Back" ng-href="#/">
+                        <ng-md-icon icon="arrow_back" class="white-icon"></ng-md-icon>
+                    </md-button>
+                    <span flex></span>
+
+                    <md-button type="submit" class="md-fab md-mini"
+                               ng-click="bliki.togglePreview()"
+                               aria-label="Preview Bliki">
+                        <ng-md-icon icon="web"></ng-md-icon>
+                        <md-tooltip>
+                            Preview
+                        </md-tooltip>
+                    </md-button>
+                    <md-button type="submit" class="md-fab md-mini"
+                               aria-label="Save Bliki"
+                               ng-disabled="mmEditor.$pristine || mmEditor.$invalid"
+                               ng-click="bliki.saveBlog()">
+                        <ng-md-icon icon="save"></ng-md-icon>
+                        <md-tooltip>
+                            Save
+                        </md-tooltip>
+                    </md-button>
+                    <md-button class="md-fab md-mini" aria-label="New Bliki">
+                        <ng-md-icon icon="add"></ng-md-icon>
+                        <md-tooltip>
+                            New
+                        </md-tooltip>
+                    </md-button>
+                    <md-button class="md-fab md-mini" aria-label="log out" ng-show="bliki.authenticated" ng-click="bliki.logoff()">
+                        <ng-md-icon icon="not_interested"></ng-md-icon>
+                        <md-tooltip>
+                            logout
+                        </md-tooltip>
+                    </md-button>
+                </div>
+            </md-toolbar>
+
+            <!-- content here -->
+            <!-- ![alt text](/path/to/img.jpg "Title") -->
+
+            <section layout="row" layout-align="space-between start" layout-margin layout-padding flex>
+                <md-card flex
+                         layout-margin
+                         layout-padding
+                         hide show-gt-sm
+                         scroll-glue
+                         id="mmPreview"
+                         class="markdown-preview">
+                    <md-card-content>
+                        <div ivo-markdown="bliki.markdown"></div>
+                    </md-card-content>
+                </md-card>
+                <md-card flex
+                         id="mmEditor"
+                         class="mm-editor"
+                         ng-hide="bliki.showPreview">
+                    <form name="mmEditor"
+                          ng-submit="bliki.save()"
+                          novalidate>
+                        <label>
+                            <textarea ng-model="bliki.markdown"
+                                      ng-required="true"
+                                      flex
+                                      layout-fill
+                                      ivo-caret-position
+                                      aria-label="markdown editor"></textarea>
+                        </label>
+                    </form>
+                    <div class="md-actions" layout="row" layout-align="end center">
+                    </div>
+                </md-card>
+                <md-card hide show-gt-lg
+                         ng-hide="bliki.showPreview"
+                         ng-click="bliki.insertImage()">
+                    <md-card-content>
+                        <div class="dropzone" file-dropzone="[image/png, image/jpeg, image/gif]"
+                             data-file="bliki.image.data" filename="bliki.image.filename" data-max-file-size="3" hide
+                             show-gt-lg>
+                            <ng-md-icon icon="add_to_photos" size="40"></ng-md-icon>
+                        </div>
+
+                        <div class="image-container" layout="column">
+                            <img ng-src="{{bliki.image.data}}"/>
+                            <span class="file-name">{{bliki.image.filename}}</span>
+                        </div>
+                    </md-card-content>
+                </md-card>
+            </section>
+        </md-content>
+    </section>
+</div>
+
