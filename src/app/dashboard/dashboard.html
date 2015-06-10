@@ -9,7 +9,7 @@
         <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left"
                     md-is-locked-open="$mdMedia('gt-md')">
 
-            <md-toolbar>
+            <md-toolbar class="md-whiteframe-glow-z2 md-default-theme">
                 <h1 class="md-toolbar-tools">
                     <md-button hide-gt-md ng-click="dash.closeSideBar()" aria-label="Close Sidebar">
                         <ng-md-icon icon="close" class="white-icon"></ng-md-icon>
@@ -29,7 +29,7 @@
         </md-sidenav>
 
         <!-- Main content -->
-        <md-content flex>
+        <div layout="column" layout-fill>
             <md-toolbar>
                 <div class="md-toolbar-tools">
                     <md-button class="md-icon-button md-default-theme" hide-gt-md aria-label="Toggle Menu"
@@ -42,9 +42,11 @@
                     </md-button>
                 </div>
             </md-toolbar>
-            <div layout="column" layout-fill layout-padding layout-align="top left">
-                {{dash.content}}
-            </div>
-        </md-content>
+            <md-content flex>
+                <div layout="column" layout-fill layout-padding layout-align="top left">
+                    {{dash.content}}
+                </div>
+            </md-content>
+        </div>
     </section>
 </div>

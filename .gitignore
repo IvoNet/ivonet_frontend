@@ -5,3 +5,4 @@ dist/
 docs/
 .idea/
 **/cookies.txt
+_tmp/
