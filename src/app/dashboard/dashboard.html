@@ -3,64 +3,63 @@
 <meta view-head name="author" content="Ivo Woltring">
 <meta view-head name="keywords" content="{{dash.keywords}}">
 
-<div layout="column" layout-fill>
-    <section layout="row">
-        <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left"
-                    md-is-locked-open="$mdMedia('gt-md')">
 
-            <md-toolbar class="md-whiteframe-glow-z2 md-default-theme">
-                <h1 class="md-toolbar-tools">
-                    <md-button hide-gt-md ng-click="dash.closeSideBar()" class="md-icon-button md-default-theme"
-                               aria-label="Close sidebar">
-                        <md-icon md-svg-src="close" class="white-icon "></md-icon>
-                    </md-button>
-                    <md-button ng-href="#/" layout="row" class="ivo-inline-flex">
-                        <ivo-wolf-logo></ivo-wolf-logo>
-                        <div class="logotype">IvoNet - {{viewTitle}}</div>
-                    </md-button>
+<section layout="row">
+    <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left"
+                md-is-locked-open="$mdMedia('gt-md')">
 
-                </h1>
+        <md-toolbar class="md-whiteframe-glow-z2 md-default-theme md-whiteframe-z1">
+            <h1 class="md-toolbar-tools">
+                <md-button hide-gt-md ng-click="dash.closeSideBar()" class="md-icon-button md-default-theme"
+                           aria-label="Close sidebar">
+                    <md-icon md-svg-src="close" class="white-icon "></md-icon>
+                </md-button>
+                <md-button ng-href="#/" layout="row" class="ivo-inline-flex">
+                    <ivo-wolf-logo></ivo-wolf-logo>
+                    <div class="logotype">IvoNet - {{viewTitle}}</div>
+                </md-button>
+
+            </h1>
+            <span flex></span>
+        </md-toolbar>
+        <md-content layout-padding>
+            <p hide-sm hide-md show-gt-md>
+                This sidenav is locked open on your device. To go back to the default behavior,
+                narrow your display.
+            </p>
+            <p>
+                {{dash.content}}
+            </p>
+        </md-content>
+    </md-sidenav>
+
+    <!-- Main content -->
+    <div layout="column" layout-fill>
+        <md-toolbar class="md-whiteframe-z1">
+            <div class="md-toolbar-tools ">
+                <md-button class="md-icon-button md-default-theme" hide-gt-md aria-label="Toggle Menu"
+                           ng-click="dash.openSideBar()">
+                    <md-icon md-svg-src="menu" class="white-icon"></md-icon>
+                </md-button>
                 <span flex></span>
-            </md-toolbar>
-            <md-content layout-padding>
-                <p hide-sm hide-md show-gt-md>
-                    This sidenav is locked open on your device. To go back to the default behavior,
-                    narrow your display.
-                </p>
-            </md-content>
-        </md-sidenav>
-
-        <!-- Main content -->
-        <div layout="column" layout-fill>
-            <md-content>
-                <md-toolbar>
-                    <div class="md-toolbar-tools">
-                        <md-button class="md-icon-button md-default-theme" hide-gt-md aria-label="Toggle Menu"
-                                   ng-click="dash.openSideBar()">
-                            <md-icon md-svg-src="menu" class="white-icon"></md-icon>
-                        </md-button>
-                        <span flex></span>
-                        <md-button class="md-icon-button md-default-theme" aria-label="Bliki" ng-href="#/bliki">
-                            <md-icon md-svg-src="edit" class="white-icon"></md-icon>
-                        </md-button>
-                    </div>
-                </md-toolbar>
-                <md-content layout="column" layout-fill layout-padding layout-align="top left">
-
-                    {{dash.content}}
-                    <span flex></span>
-                    {{dash.content}}
-                    <span flex></span>
-                    {{dash.content}}
-                    <span flex></span>
-                    {{dash.content}}
-                    <span flex></span>
-                    {{dash.content}}
-                    <span flex></span>
-                    {{dash.content}}
-                    <span flex></span>
-                </md-content>
-            </md-content>
-        </div>
-    </section>
-</div>
+                <md-button class="md-icon-button md-default-theme" aria-label="Bliki" ng-href="#/bliki">
+                    <md-icon md-svg-src="edit" class="white-icon"></md-icon>
+                </md-button>
+            </div>
+        </md-toolbar>
+        <md-content layout-padding>
+            {{dash.content}}
+            <span flex layout-align=""></span>
+            {{dash.content}}
+            <span flex></span>
+            {{dash.content}}
+            <span flex></span>
+            {{dash.content}}
+            <span flex></span>
+            {{dash.content}}
+            <span flex></span>
+            {{dash.content}}
+            <span flex></span>
+        </md-content>
+    </div>
+</section>
