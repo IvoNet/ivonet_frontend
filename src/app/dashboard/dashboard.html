@@ -3,22 +3,24 @@
 <meta view-head name="author" content="Ivo Woltring">
 <meta view-head name="keywords" content="{{dash.keywords}}">
 
-
-<div layout="column">
-    <section layout="row" flex>
+<div layout="column" layout-fill>
+    <section layout="row">
         <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left"
                     md-is-locked-open="$mdMedia('gt-md')">
 
             <md-toolbar class="md-whiteframe-glow-z2 md-default-theme">
                 <h1 class="md-toolbar-tools">
-                    <md-button hide-gt-md ng-click="dash.closeSideBar()" aria-label="Close Sidebar">
-                        <ng-md-icon icon="close" class="white-icon"></ng-md-icon>
+                    <md-button hide-gt-md ng-click="dash.closeSideBar()" class="md-icon-button md-default-theme"
+                               aria-label="Close sidebar">
+                        <md-icon md-svg-src="close" class="white-icon "></md-icon>
                     </md-button>
                     <md-button ng-href="#/" layout="row" class="ivo-inline-flex">
                         <ivo-wolf-logo></ivo-wolf-logo>
                         <div class="logotype">IvoNet - {{viewTitle}}</div>
                     </md-button>
+
                 </h1>
+                <span flex></span>
             </md-toolbar>
             <md-content layout-padding>
                 <p hide-sm hide-md show-gt-md>
@@ -30,22 +32,34 @@
 
         <!-- Main content -->
         <div layout="column" layout-fill>
-            <md-toolbar>
-                <div class="md-toolbar-tools">
-                    <md-button class="md-icon-button md-default-theme" hide-gt-md aria-label="Toggle Menu"
-                               ng-click="dash.openSideBar()">
-                        <ng-md-icon icon="menu" class="white-icon"></ng-md-icon>
-                    </md-button>
-                    <span flex></span>
-                    <md-button class="md-icon-button md-default-theme" aria-label="Bliki" ng-href="#/bliki">
-                        <ng-md-icon icon="edit" class="white-icon"></ng-md-icon>
-                    </md-button>
-                </div>
-            </md-toolbar>
-            <md-content flex>
-                <div layout="column" layout-fill layout-padding layout-align="top left">
+            <md-content>
+                <md-toolbar>
+                    <div class="md-toolbar-tools">
+                        <md-button class="md-icon-button md-default-theme" hide-gt-md aria-label="Toggle Menu"
+                                   ng-click="dash.openSideBar()">
+                            <md-icon md-svg-src="menu" class="white-icon"></md-icon>
+                        </md-button>
+                        <span flex></span>
+                        <md-button class="md-icon-button md-default-theme" aria-label="Bliki" ng-href="#/bliki">
+                            <md-icon md-svg-src="edit" class="white-icon"></md-icon>
+                        </md-button>
+                    </div>
+                </md-toolbar>
+                <md-content layout="column" layout-fill layout-padding layout-align="top left">
+
                     {{dash.content}}
-                </div>
+                    <span flex></span>
+                    {{dash.content}}
+                    <span flex></span>
+                    {{dash.content}}
+                    <span flex></span>
+                    {{dash.content}}
+                    <span flex></span>
+                    {{dash.content}}
+                    <span flex></span>
+                    {{dash.content}}
+                    <span flex></span>
+                </md-content>
             </md-content>
         </div>
     </section>

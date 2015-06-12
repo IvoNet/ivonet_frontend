@@ -12,35 +12,35 @@
             <md-toolbar>
                 <div class="md-toolbar-tools">
                     <md-button class="md-icon-button md-default-theme" aria-label="Back" ng-href="#/">
-                        <ng-md-icon icon="arrow_back" class="white-icon"></ng-md-icon>
+                        <md-icon md-svg-src="arrow_back" class="white-icon"></md-icon>
                     </md-button>
                     <span flex></span>
 
-                    <md-button type="submit" class="md-fab md-mini"
+                    <md-button type="submit" class="md-icon-button"
                                ng-click="bliki.togglePreview()"
                                aria-label="Preview Bliki">
-                        <ng-md-icon icon="web"></ng-md-icon>
+                        <md-icon md-svg-src="web"></md-icon>
                         <md-tooltip>
                             Preview
                         </md-tooltip>
                     </md-button>
-                    <md-button type="submit" class="md-fab md-mini"
+                    <md-button type="submit" class="md-icon-button"
                                aria-label="Save Bliki"
                                ng-disabled="mmEditor.$pristine || mmEditor.$invalid"
                                ng-click="bliki.saveBlog()">
-                        <ng-md-icon icon="save"></ng-md-icon>
+                        <md-icon md-svg-icon="save"></md-icon>
                         <md-tooltip>
                             Save
                         </md-tooltip>
                     </md-button>
-                    <md-button class="md-fab md-mini" aria-label="New Bliki">
-                        <ng-md-icon icon="add"></ng-md-icon>
+                    <md-button class="md-icon-button" aria-label="New Bliki">
+                        <md-icon md-svg-src="add"></md-icon>
                         <md-tooltip>
                             New
                         </md-tooltip>
                     </md-button>
                     <md-button class="md-fab md-mini" aria-label="log out" ng-show="bliki.authenticated" ng-click="bliki.logoff()">
-                        <ng-md-icon icon="not_interested"></ng-md-icon>
+                        <md-icon md-svg-src="not_interested"></md-icon>
                         <md-tooltip>
                             logout
                         </md-tooltip>
@@ -89,7 +89,7 @@
                         <div class="dropzone" file-dropzone="[image/png, image/jpeg, image/gif]"
                              data-file="bliki.image.data" filename="bliki.image.filename" data-max-file-size="3" hide
                              show-gt-lg>
-                            <ng-md-icon icon="add_to_photos" size="40"></ng-md-icon>
+                            <md-icon md-svg-src="add_to_photos" size="40"></md-icon>
                         </div>
 
                         <div class="image-container" layout="column">

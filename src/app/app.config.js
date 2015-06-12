@@ -18,10 +18,11 @@
       "hljsServiceProvider",
       "ivoMarkdownConfigProvider",
       "IvoNetCouchConfigProvider"
+      ,"$mdIconProvider"
    ];
 
    function IvoNetConfig($routeProvider, $mdThemingProvider, hljsServiceProvider, ivoMarkdownConfigProvider,
-                         IvoNetCouchConfigProvider) {
+                         IvoNetCouchConfigProvider, $mdIconProvider) {
       //$mdThemingProvider.theme('default').primaryPalette('indigo');
       $mdThemingProvider.theme('default')
             .primaryPalette("indigo")
@@ -45,6 +46,9 @@
       });
 
       IvoNetCouchConfigProvider.server = '//localhost:5984';
+
+      $mdIconProvider
+           .defaultIconSet('/assets/svg/ivonet_core.svg');
 
 
       $routeProvider

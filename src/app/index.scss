@@ -1,8 +1,7 @@
 html,
 body {
-    height: 100%;
-    min-height: 100%;
-    background-color: #C5CAE9;
+    margin: 0;
+    padding: 0;
 }
 
 .browsehappy {
@@ -28,6 +27,11 @@ body {
 
 .white-icon {
     fill: white;
+}
+
+#maincontent {
+    height: 100%;
+    width: 100%;
 }
 
 // injector

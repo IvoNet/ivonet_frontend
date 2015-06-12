@@ -10,7 +10,6 @@
     "angular-route": "~1.4.0",
     "angular": "~1.4.0",
     "angular-aria": "~1.4.0",
-    "angular-material-icons": "~0.4.0",
     "material-design-icons": "~2.0.0",
     "angular-material": "~0.9.8",
     "angular-highlightjs": "~0.4.1",
@@ -24,10 +23,12 @@
     "showdown-target-blank": "*",
     "highlightjs-scss": "~7.3.0",
     "angular-ivonet-couchdb": "~1.0.1",
-    "angular-ivonet-markdown": "~1.0.3"
+    "angular-ivonet-markdown": "~1.0.3",
+    "angular-material-icons": "~0.4.0"
   },
   "devDependencies": {
     "angular-mocks": "^1.4.0",
-    "ng-improved-testing": "~0.3.0"
+    "ng-improved-testing": "~0.3.0",
+    "material-design-icons": "~2.0.0"
   }
 }
