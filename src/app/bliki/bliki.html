@@ -4,8 +4,7 @@
 <meta view-head name="keywords" content="{{bliki.keywords}}">
 
 
-
-<div layout="column" layout-fill>
+<div layout="column" layout-fill aria-label="FooBarBazz">
     <section layout="row" flex layout-fill>
         <!-- Main content -->
         <md-content flex>
@@ -33,13 +32,14 @@
                             Save
                         </md-tooltip>
                     </md-button>
-                    <md-button class="md-icon-button" aria-label="New Bliki">
+                    <md-button class="md-icon-button" aria-label="New Bliki. Fuck You">
                         <md-icon md-svg-src="add"></md-icon>
                         <md-tooltip>
                             New
                         </md-tooltip>
                     </md-button>
-                    <md-button class="md-fab md-mini" aria-label="log out" ng-show="bliki.authenticated" ng-click="bliki.logoff()">
+                    <md-button class="md-fab md-mini" aria-label="log out" ng-show="bliki.authenticated"
+                               ng-click="bliki.logoff()">
                         <md-icon md-svg-src="not_interested"></md-icon>
                         <md-tooltip>
                             logout
@@ -86,6 +86,7 @@
                          ng-hide="bliki.showPreview"
                          ng-click="bliki.insertImage()">
                     <md-card-content>
+
                         <div class="dropzone" file-dropzone="[image/png, image/jpeg, image/gif]"
                              data-file="bliki.image.data" filename="bliki.image.filename" data-max-file-size="3" hide
                              show-gt-lg>

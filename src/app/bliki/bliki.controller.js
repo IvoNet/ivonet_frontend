@@ -9,12 +9,10 @@
       '$mdDialog',
       '$mdToast',
       'Config',
-      'session',
-      'couchdb'
-
+      'session'
    ];
 
-   function Bliki(logger, $rootScope, $mdDialog, $mdToast, Config, session, couchdb) {
+   function Bliki(logger, $rootScope, $mdDialog, $mdToast, Config, session) {
       logger.info('Bliki entered');
       var self = this;
       self.title = "Bliki";
@@ -27,8 +25,13 @@
 
       self.authenticated = false;
 
-      couchdb.server.setUrl(Config.getCouchDBBaseUri());
-      couchdb.db.use("bliki");
+      self.isOpen = false;
+      self.demo = {
+         count: 0
+      };
+
+      //couchdb.server.setUrl(Config.getCouchDBBaseUri());
+      //couchdb.db.use("bliki");
 
       self.markdown =
            "# Python code\n\n```python\n\nimport IvoNet\n\ndef hello():\n    print 'hello world'\n```\n\n```python\n\nimport IvoNet\n\ndef hello():\n    print 'hello world'\n```\n```html\n<div class=\"foo\"><p>text</p></div>\n```\n\n## header 2\nand some normal text here\n\n* bullet 1\n* bullet *italic* 2\n    * indented bullet in **bold**\n\n|Markdown | Less | Pretty |\n|---: | --: | ---: |\n|*Still* | `renders` | **nicely**|\n|1 | 2 | 3|\n\nThis is a @ivonet tweet\n\nthis is ~~deleted text~~";
@@ -53,16 +56,16 @@
          });
       };
 
-      self.isAuthenticated = function () {
-         couchdb.user.isAuthenticated().then(function (data) {
-            console.log("Authenticated: " + data);
-            self.authenticated = data;
-            return data;
-         }, function (data) {
-            logger.info(data);
-            return false;
-         });
-      };
+      //self.isAuthenticated = function () {
+      //   couchdb.user.isAuthenticated().then(function (data) {
+      //      console.log("Authenticated: " + data);
+      //      self.authenticated = data;
+      //      return data;
+      //   }, function (data) {
+      //      logger.info(data);
+      //      return false;
+      //   });
+      //};
 
       self.logoff = function () {
          couchdb.user.logout().then(function (data) {
@@ -84,24 +87,24 @@
 
          }
 
-         couchdb.user.isAuthenticated().then(function (authenticated) {
-            console.log("Authenticated: " + authenticated);
-            if (!authenticated) {
-               console.log("need to log in first");
-               $mdDialog.show({
-                  //controller: SignupLoginController,
-                  templateUrl: 'app/couchdb/login.html'
-                  //targetEvent: ev
-               }).then(function () {
-                  self.alert = 'Logged in.';
-                  self.authenticated = true;
-                  self.showAlertToast();
-               }, function () {
-                  self.alert = 'You cancelled the dialog.';
-                  self.showAlertToast()
-               });
-            }
-         });
+         //couchdb.user.isAuthenticated().then(function (authenticated) {
+         //   console.log("Authenticated: " + authenticated);
+         //   if (!authenticated) {
+         //      console.log("need to log in first");
+         //      $mdDialog.show({
+         //         //controller: SignupLoginController,
+         //         templateUrl: 'app/couchdb/login.html'
+         //         //targetEvent: ev
+         //      }).then(function () {
+         //         self.alert = 'Logged in.';
+         //         self.authenticated = true;
+         //         self.showAlertToast();
+         //      }, function () {
+         //         self.alert = 'You cancelled the dialog.';
+         //         self.showAlertToast()
+         //      });
+         //   }
+         //});
 
          console.log("saveing the blog");
          var doc = {};

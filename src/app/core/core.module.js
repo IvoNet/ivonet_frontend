@@ -32,7 +32,6 @@
       'ngTouch',
       'ngSanitize',
       'ngMaterial',
-      'ngMdIcons',
       'ngResource',
       'ngRoute',
 

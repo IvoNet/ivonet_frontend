@@ -17,12 +17,11 @@
       "$mdThemingProvider",
       "hljsServiceProvider",
       "ivoMarkdownConfigProvider",
-      "IvoNetCouchConfigProvider"
-      ,"$mdIconProvider"
+      "$mdIconProvider"
    ];
 
-   function IvoNetConfig($routeProvider, $mdThemingProvider, hljsServiceProvider, ivoMarkdownConfigProvider,
-                         IvoNetCouchConfigProvider, $mdIconProvider) {
+   function IvoNetConfig($routeProvider, $mdThemingProvider, hljsServiceProvider, ivoMarkdownConfigProvider
+                         , $mdIconProvider) {
       //$mdThemingProvider.theme('default').primaryPalette('indigo');
       $mdThemingProvider.theme('default')
             .primaryPalette("indigo")
@@ -45,7 +44,7 @@
          ]
       });
 
-      IvoNetCouchConfigProvider.server = '//localhost:5984';
+      //IvoNetCouchConfigProvider.server = '//localhost:5984';
 
       $mdIconProvider
            .defaultIconSet('/assets/svg/ivonet_core.svg');

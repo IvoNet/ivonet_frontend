@@ -8,6 +8,5 @@
       'ivoPanels'
 
       //Features
-      , 'IvoNetCouchDB'
    ]);
 })();
