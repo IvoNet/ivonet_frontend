@@ -23,7 +23,7 @@
     "geek"
   ],
   "author": "Ivo Woltring",
-  "license": "Apache 2.0",
+  "license": "Apache License 2.0",
   "bugs": {
     "url": "https://github.com/IvoNet/ivonet_frontend/issues"
   },
@@ -74,6 +74,6 @@
     "wiredep": "~3.0.0-beta"
   },
   "engines": {
-    "node": ">=0.10.0"
+    "node": ">=0.12.4"
   }
 }

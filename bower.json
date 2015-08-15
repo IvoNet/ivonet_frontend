@@ -1,7 +1,7 @@
 {
   "name": "ivonet",
   "dependencies": {
-    "jquery": "~2.1.1",
+    "jquery": "~2.1.4",
     "angular-animate": "~1.4.0",
     "angular-cookies": "~1.4.0",
     "angular-touch": "~1.4.0",
@@ -11,10 +11,10 @@
     "angular": "~1.4.0",
     "angular-aria": "~1.4.0",
     "material-design-icons": "~2.0.0",
-    "angular-material": "~0.10.0",
+    "angular-material": "~0.10.1",
     "angular-highlightjs": "~0.4.1",
-    "highlightjs": "~8.5.0",
-    "showdown": "~1.1.0",
+    "highlightjs": "~8.7.0",
+    "showdown": "~1.2.2",
     "angular-scroll-glue": "~2.0.5",
     "showdown-table": "~1.0.0",
     "showdown-twitter": "~1.0.1",
@@ -30,6 +30,7 @@
     "material-design-icons": "~2.0.0"
   },
   "resolutions": {
-    "showdown": "~1.1.0"
+    "showdown": "~1.2.2",
+    "highlightjs": "~8.7.0"
   }
 }
