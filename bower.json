@@ -2,18 +2,18 @@
   "name": "ivonet",
   "dependencies": {
     "jquery": "~2.1.4",
-    "angular-animate": "~1.4.4",
-    "angular-cookies": "~1.4.4",
-    "angular-touch": "~1.4.4",
-    "angular-sanitize": "~1.4.4",
-    "angular-resource": "~1.4.4",
-    "angular-route": "~1.4.4",
-    "angular": "~1.4.4",
-    "angular-aria": "~1.4.4",
+    "angular-animate": "~1.4.6",
+    "angular-cookies": "~1.4.6",
+    "angular-touch": "~1.4.6",
+    "angular-sanitize": "~1.4.6",
+    "angular-resource": "~1.4.6",
+    "angular-route": "~1.4.6",
+    "angular": "~1.4.6",
+    "angular-aria": "~1.4.6",
     "material-design-icons": "~2.0.0",
-    "angular-material": "~0.10.1",
+    "angular-material": "~0.11.0",
     "angular-highlightjs": "~0.4.1",
-    "highlightjs": "~8.7.0",
+    "highlightjs": "~8.8.0",
     "showdown": "~1.2.2",
     "angular-scroll-glue": "~2.0.5",
     "showdown-table": "~1.0.0",
@@ -28,5 +28,10 @@
     "angular-mocks": "^1.4.4",
     "ng-improved-testing": "~0.3.0",
     "material-design-icons": "~2.0.0"
+  },
+  "resolutions": {
+    "angular": "~1.4.6",
+    "angular-material": "~0.11.0",
+    "highlightjs": "~8.8.0"
   }
 }

@@ -34,8 +34,10 @@
             config: {
                apiroot: '//localhost:8080',
                loggingUrl: '/logging/rest/log',
+               bliki: '/bliki/rest/folders/',
                sessionCheckInterval: 30000,
                couchdb: {
+                  //TODO weghalen
                   url: '//localhost:5984',
                   bliki: '/bliki',
                   image: '/image'
@@ -48,7 +50,9 @@
             config: {
                apiroot: '//beta.ivonet.nl/api',
                loggingUrl: '/logging/rest/log',
+               bliki: '/bliki/rest/folders/',
                couchdb: {
+                  //TODO weghalen
                   url: '//beta.ivonet.nl/cdb',
                   bliki: '/bliki',
                   image: '/image'
@@ -60,7 +64,9 @@
             config: {
                apiroot: '//www.ivonet.nl/api',
                loggingUrl: '/logging/rest/log',
+               bliki: '/bliki/rest/folders/',
                couchdb: {
+                  //TODO weghalen
                   url: '//www.ivonet.nl/cdb',
                   bliki: '/bliki',
                   image: '/image'
@@ -72,7 +78,9 @@
             config: {
                apiroot: '//www.ivonet.it/api',
                loggingUrl: '/logging/rest/log',
+               bliki: '/bliki/rest/folders/',
                couchdb: {
+                  //TODO weghalen
                   url: '//www.ivonet.it/cdb',
                   bliki: '/bliki',
                   image: '/image'
@@ -103,6 +111,9 @@
          },
          getLoggingAbsUrl: function () {
             return this.get('apiroot') + this.get('loggingUrl');
+         },
+         getBliki: function () {
+            return this.get('apiroot') + this.get('bliki');
          },
          getCouchDB: function () {
             return this.get('couchdb');

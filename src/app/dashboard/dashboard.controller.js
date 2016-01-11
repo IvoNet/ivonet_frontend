@@ -29,6 +29,9 @@
 
       logger.info("The string constant: " + Config.get('apiroot'));
 
+      vm.getMenu = function () {
+         Config.getBliki()
+      };
 
       vm.toggleSideBar = function () {
          $mdSidenav('left').toggle()
