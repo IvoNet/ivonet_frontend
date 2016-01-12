@@ -29,7 +29,6 @@
       //Angular modules
       'ngAnimate',
       'ngCookies',
-      'ngTouch',
       'ngSanitize',
       'ngMaterial',
       'ngResource',

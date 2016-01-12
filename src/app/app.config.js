@@ -1,6 +1,5 @@
 'use strict';
 
-
 /**
  * @ngdoc overview
  * @name ivonet
@@ -21,13 +20,13 @@
    ];
 
    function IvoNetConfig($routeProvider, $mdThemingProvider, hljsServiceProvider, ivoMarkdownConfigProvider
-                         , $mdIconProvider) {
+        , $mdIconProvider
+   ) {
       //$mdThemingProvider.theme('default').primaryPalette('indigo');
       $mdThemingProvider.theme('default')
-            .primaryPalette("indigo")
-            .accentPalette('pink')
-            .warnPalette('red');
-
+           .primaryPalette("indigo")
+           .accentPalette('pink')
+           .warnPalette('red');
 
       hljsServiceProvider.setOptions({
          // replace tab with 4 spaces
@@ -35,11 +34,14 @@
       });
 
       ivoMarkdownConfigProvider.config({
+         tables: true,
+         parseImgDimensions: true,
+         simplifiedAutoLink: true,
+         tasklists: true,
+         smoothLivePreview: true,
+         strikethrough: true,
          extensions: [
-            'table',
-            'github',
             'twitter',
-            'prettify',
             'targetblank'
          ]
       });
@@ -49,27 +51,26 @@
       $mdIconProvider
            .defaultIconSet('/assets/svg/ivonet_core.svg');
 
-
       $routeProvider
-            .when('/', {
-               templateUrl: 'app/dashboard/dashboard.html',
-               controller: 'Dashboard as dash'
-            })
-            .when('/bliki', {
-               templateUrl: 'app/bliki/bliki.html',
-               controller: 'Bliki as bliki'
-            })
-            .when('/downloads', {
-               templateUrl: 'app/dashboard/dashboard.html',
-               controller: 'Dashboard as dash'
-            })
-            .when('/books', {
-               templateUrl: 'app/dashboard/dashboard.html',
-               controller: 'Dashboard as dash'
-            })
-            .otherwise({
-               redirectTo: '/'
-            });
+           .when('/', {
+              templateUrl: 'app/dashboard/dashboard.html',
+              controller: 'Dashboard as dash'
+           })
+           .when('/bliki', {
+              templateUrl: 'app/bliki/bliki.html',
+              controller: 'Bliki as bliki'
+           })
+           .when('/downloads', {
+              templateUrl: 'app/dashboard/dashboard.html',
+              controller: 'Dashboard as dash'
+           })
+           .when('/books', {
+              templateUrl: 'app/dashboard/dashboard.html',
+              controller: 'Dashboard as dash'
+           })
+           .otherwise({
+              redirectTo: '/'
+           });
    }
 })();
 
