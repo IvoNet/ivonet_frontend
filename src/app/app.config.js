@@ -49,7 +49,7 @@
       //IvoNetCouchConfigProvider.server = '//localhost:5984';
 
       $mdIconProvider
-           .defaultIconSet('/assets/svg/ivonet_core.svg');
+           .defaultIconSet('/assets/images/ivonet_core.svg');
 
       $routeProvider
            .when('/', {
