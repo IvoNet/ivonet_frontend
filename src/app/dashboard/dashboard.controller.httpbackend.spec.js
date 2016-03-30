@@ -19,7 +19,7 @@ describe('Dashboard test with $httpBackend style specification', function () {
   }));
 
   beforeEach(inject(function ($httpBackend, _$controller_, $rootScope) {
-    //$httpBackend.whenPOST();
+    $httpBackend.whenPOST();
     $scope = $rootScope.$new();
     $controller = _$controller_('Dashboard');
 

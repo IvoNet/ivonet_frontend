@@ -4,7 +4,7 @@
 
       //Widgets
       'ivoNavbar',
-      'ivoLogin',
+      // 'ivoLogin',
       'ivoPanels'
 
       //Features

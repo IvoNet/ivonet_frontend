@@ -8,8 +8,8 @@
       '$rootScope',
       '$mdDialog',
       '$mdToast',
-      'Config',
-      'session'
+      'Config'
+      // 'session'
    ];
 
    function Bliki(logger, $rootScope, $mdDialog, $mdToast, Config, session) {

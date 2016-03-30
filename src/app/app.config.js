@@ -36,7 +36,7 @@
       ivoMarkdownConfigProvider.config({
          tables: true,
          parseImgDimensions: true,
-         simplifiedAutoLink: true,
+         simplifiedAutoLink: false,
          tasklists: true,
          smoothLivePreview: true,
          strikethrough: true,
@@ -45,8 +45,6 @@
             'targetblank'
          ]
       });
-
-      //IvoNetCouchConfigProvider.server = '//localhost:5984';
 
       $mdIconProvider
            .defaultIconSet('/assets/images/ivonet_core.svg');

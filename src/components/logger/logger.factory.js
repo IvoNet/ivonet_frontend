@@ -15,48 +15,48 @@
  */
 
 (function () {
-  'use strict';
+   'use strict';
 
-  angular
-    .module('ivoLogger')
-    .factory('logger', logger);
+   angular
+        .module('ivoLogger')
+        .factory('logger', logger);
 
-  logger.$inject = [
-    '$log',
-    '$http',
-    'Config'
-  ];
+   logger.$inject = [
+      '$log',
+      '$http',
+      'Config'
+   ];
 
-  function logger($log, $http, Config) {
+   function logger($log, $http, Config) {
 
-    var url = Config.getLoggingAbsUrl();
+      var url = Config.getLoggingAbsUrl();
 
-    return {
-      error: error,
-      info: info,
-      success: success,
-      warning: warning,
+      return {
+         error: error,
+         info: info,
+         success: success,
+         warning: warning,
 
-      // straight to console; bypass toastr
-      log: $log.log
-    };
+         // straight to console; bypass toastr
+         log: $log.log
+      };
 
-    function error(message, data) {
-      $log.error('Error: ' + message, data);
-    }
+      function error(message, data) {
+         $log.error('Error: ' + message, data);
+      }
 
-    function info(message, data) {
-      $http.post(url, '{"message": "' + message + '"}', {'Content-Type': 'application/json;charset=UTF-8'});
-      // "content-type" : "application/json;charset=UTF-8"
-      $log.info('Info: ' + message, data);
-    }
+      function info(message, data) {
+         // $http.post(url, '{"message": "' + message + '"}', {'Content-Type': 'application/json;charset=UTF-8'});
+         // "content-type" : "application/json;charset=UTF-8"
+         $log.info('Info: ' + message, data);
+      }
 
-    function success(message, data) {
-      $log.info('Success: ' + message, data);
-    }
+      function success(message, data) {
+         $log.info('Success: ' + message, data);
+      }
 
-    function warning(message, data) {
-      $log.warn('Warning: ' + message, data);
-    }
-  }
+      function warning(message, data) {
+         $log.warn('Warning: ' + message, data);
+      }
+   }
 }());

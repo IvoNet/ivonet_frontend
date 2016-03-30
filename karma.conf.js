@@ -2,38 +2,37 @@
 
 module.exports = function (config) {
 
-  config.set({
-               preprocessors: { //See alse the gulp 'unit-tests.js'
-                 '**/*.html': ['ng-html2js'],
-                 'src/**/*.js': ['coverage']
-               },
+   config.set({
+      preprocessors: { //See alse the gulp 'unit-tests.js'
+         '**/*.html': ['ng-html2js'],
+         'src/**/*.js': ['coverage']
+      },
 
-               autoWatch: false,
+      autoWatch: false,
 
-               frameworks: [
-                 'jasmine'
-               ],
+      frameworks: [
+         'jasmine'
+      ],
 
-               browsers: ['PhantomJS'],
+      browsers: ['PhantomJS'],
 
-               plugins: [
-                 'karma-phantomjs-launcher',
-                 'karma-jasmine',
-                 'karma-ng-html2js-preprocessor',
-                 'karma-coverage'
-               ],
-               ngHtml2JsPreprocessor: {
-                 stripPrefix: 'src/'
-               },
-               reporters: [
-                 'progress',
-                 '.tmp/coverage'
-               ],
-               coverageReporter: {
-                 type: 'html',
-                 dir: '.tmp/coverage/'
-               }
+      plugins: [
+         'karma-phantomjs-launcher',
+         'karma-jasmine',
+         'karma-ng-html2js-preprocessor',
+         'karma-coverage'
+      ],
+      ngHtml2JsPreprocessor: {
+         stripPrefix: 'src/'
+      },
+      reporters: [
+         'progress',
+         '.tmp/coverage'
+      ],
+      coverageReporter: {
+         type: 'html',
+         dir: '.tmp/coverage/'
+      }
 
-
-             });
+   });
 };
