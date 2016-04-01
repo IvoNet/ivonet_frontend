@@ -55,18 +55,18 @@
               templateUrl: 'app/dashboard/dashboard.html',
               controller: 'Dashboard as dash'
            })
-           .when('/bliki', {
-              templateUrl: 'app/bliki/bliki.html',
-              controller: 'Bliki as bliki'
-           })
-           .when('/downloads', {
-              templateUrl: 'app/dashboard/dashboard.html',
-              controller: 'Dashboard as dash'
-           })
-           .when('/books', {
-              templateUrl: 'app/dashboard/dashboard.html',
-              controller: 'Dashboard as dash'
-           })
+           // .when('/bliki', {
+           //    templateUrl: 'app/bliki/bliki.html',
+           //    controller: 'Bliki as bliki'
+           // })
+           // .when('/downloads', {
+           //    templateUrl: 'app/dashboard/dashboard.html',
+           //    controller: 'Dashboard as dash'
+           // })
+           // .when('/books', {
+           //    templateUrl: 'app/dashboard/dashboard.html',
+           //    controller: 'Dashboard as dash'
+           // })
            .otherwise({
               redirectTo: '/'
            });
