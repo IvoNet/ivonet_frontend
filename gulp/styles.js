@@ -9,6 +9,7 @@ var $ = require('gulp-load-plugins')();
 gulp.task('styles', function () {
 
    var sassOptions = {
+      outputStyle: 'compressed',
       style: 'expanded'
    };
 
@@ -29,7 +30,7 @@ gulp.task('styles', function () {
       addRootSlash: false
    };
 
-   var indexFilter = $.filter('index.scss', {restore: true});
+   var indexFilter = $.filter(['**/*.scss', '!index.scss'], {restore: true});
 
    return gulp.src([
       paths.src + '/app/index.scss',

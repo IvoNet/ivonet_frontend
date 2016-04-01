@@ -24,8 +24,8 @@
    ) {
       //$mdThemingProvider.theme('default').primaryPalette('indigo');
       $mdThemingProvider.theme('default')
-           .primaryPalette("indigo")
-           .accentPalette('pink')
+           .primaryPalette("teal")
+           .accentPalette('deep-orange')
            .warnPalette('red');
 
       hljsServiceProvider.setOptions({
