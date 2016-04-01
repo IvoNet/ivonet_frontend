@@ -27,7 +27,6 @@
       vm.imageFileName = '';
 
 
-      logger.info("The string constant: " + Config.get('apiroot'));
 
       vm.getMenu = function () {
          Config.getBliki()

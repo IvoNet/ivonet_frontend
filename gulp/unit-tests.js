@@ -2,7 +2,11 @@
 
 var gulp = require('gulp');
 
-var $ = require('gulp-load-plugins')();
+var $ = require('gulp-load-plugins')({
+   rename: {
+      'gulp-karma2': 'karma'
+   }
+});
 
 var wiredep = require('wiredep');
 
@@ -18,7 +22,6 @@ function runTests(singleRun, done) {
 
    var testFiles = bowerDeps.js.concat([
       paths.src + '/{app,components}/**/{*module.js,*.js}',
-      //paths.src + '/{app,components}/**/*.js',
       paths.src + '/{app,components}/**/*.html' //Added because of the karma-ng-html2js-preprocessor
    ]);
 
@@ -34,10 +37,24 @@ function runTests(singleRun, done) {
 
 }
 
+var Server = require('karma').Server;
+
 /**
  * Run test once and exit
  */
-gulp.task('test', function (done) { runTests(true /* singleRun */, done) });
+gulp.task('test2', function (done) {
+   new Server({
+      configFile: __dirname + '/../karma.conf.js',
+      singleRun: true
+   }, done).start();
+});
+
+/**
+ * Run test once and exit
+ */
+gulp.task('test', function (done) {
+   runTests(true /* singleRun */, done)
+});
 gulp.task('test:auto', function (done) {
-   runTests(false /* singleRun */, done)
+   runTests(false /* autorun */, done)
 });

@@ -67,7 +67,6 @@
 
       return {
          getEnvironment: function () {
-
             if (_environment) {
                return _environment;
             }

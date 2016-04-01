@@ -23,13 +23,12 @@
 
    logger.$inject = [
       '$log',
-      '$http',
-      'Config'
+      '$http'
    ];
 
-   function logger($log, $http, Config) {
+   function logger($log, $http) {
 
-      var url = Config.getLoggingAbsUrl();
+      // var url = Config.getLoggingAbsUrl();
 
       return {
          error: error,

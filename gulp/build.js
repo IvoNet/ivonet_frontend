@@ -42,7 +42,7 @@ gulp.task('html', [
 
    var htmlFilter = $.filter('*.html', {restore: true});
    var jsFilter = $.filter('**/*.js', {restore: true});
-   var cssFilter = $.filter('**/*.css', {restore: true});
+   var cssFilter = $.filter('**/*.scss', {restore: true});
    var assets;
 
    return gulp.src(paths.tmp + '/serve/*.html')

@@ -17,6 +17,7 @@ gulp.task('styles', function () {
       '!' + paths.src + '/app/index.scss',
       '!' + paths.src + '/app/vendor.scss'
    ], {read: false});
+   // console.log(injectFiles);
 
    var injectOptions = {
       transform: function (filePath) {
