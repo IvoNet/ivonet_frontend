@@ -24,8 +24,8 @@
    ) {
       //$mdThemingProvider.theme('default').primaryPalette('indigo');
       $mdThemingProvider.theme('default')
-           .primaryPalette("grey")
-           .accentPalette('blue-grey')
+           .primaryPalette("teal")
+           .accentPalette('deep-orange')
            .warnPalette('red');
 
       hljsServiceProvider.setOptions({
@@ -36,7 +36,7 @@
       ivoMarkdownConfigProvider.config({
          tables: true,
          parseImgDimensions: true,
-         simplifiedAutoLink: false,
+         simplifiedAutoLink: true,
          tasklists: true,
          smoothLivePreview: true,
          strikethrough: true,

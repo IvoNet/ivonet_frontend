@@ -28,7 +28,6 @@
     "url": "https://github.com/IvoNet/ivonet_frontend/issues"
   },
   "homepage": "http://www.ivonet.nl",
-  "dependencies": {},
   "devDependencies": {
     "browser-sync": "~2.11.2",
     "chalk": "~1.1.3",

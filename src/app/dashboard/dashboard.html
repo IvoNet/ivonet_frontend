@@ -26,7 +26,6 @@
             <p hide-sm hide-md show-gt-md>
                 This sidenav is locked open on your device. To go back to the default behavior,
                 narrow your display.
-                <ivo-wolf-logo/>
             </p>
         </md-content>
     </md-sidenav>
@@ -46,8 +45,7 @@
             </div>
         </md-toolbar>
         <md-content layout-padding layout="">
-            {{dash.content}}
-
+            <div ivo-markdown="dash.content" flex=""></div>
             <!--<span flex ></span>-->
             <!--{{dash.content}}-->
             <!--<span flex></span>-->
@@ -60,8 +58,5 @@
             <!--{{dash.content}}-->
             <!--<span flex></span>-->
         </md-content>
-        <p>
-                    <ivo-wolf-logo></ivo-wolf-logo>
-                    </p>
     </div>
 </section>
