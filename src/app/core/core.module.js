@@ -40,10 +40,10 @@
       'ivoLogger',
       'ivoReadMore',
       'ivoCollapseText',
-      'ivoFileDrop',
+      // 'ivoFileDrop',
       'ivoLogo',
       'ivoMarkdown',
-      'ivoInsertText'
+      // 'ivoInsertText'
 
       //Third party modules
       //scroll-glue

@@ -8,9 +8,27 @@
 }
 
 md-content p {
-  font-size: 1.1em;
+  font-size: 1.2em;
 }
 
-pre code {
-    background-color: #2A7080;
+//pre code {
+//    background-color: #000;
+//}
+
+md-content h1 {
+    background-color: #B6C8D2;
+    color: #000;
+    font-size: 2em;
+}
+
+md-content h2 {
+    background-color: #EAF0F3;
+    color: #000;
+    font-size: 1.7em;
+}
+
+md-content h3 {
+    background-color: #F9F9F9;
+    color: #000;
+    font-size: 1.5em;
 }

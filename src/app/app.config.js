@@ -14,12 +14,12 @@
    IvoNetConfig.$inject = [
       "$routeProvider",
       "$mdThemingProvider",
-      "hljsServiceProvider",
+      // "hljsServiceProvider",
       "ivoMarkdownConfigProvider",
       "$mdIconProvider"
    ];
 
-   function IvoNetConfig($routeProvider, $mdThemingProvider, hljsServiceProvider, ivoMarkdownConfigProvider
+   function IvoNetConfig($routeProvider, $mdThemingProvider, ivoMarkdownConfigProvider
         , $mdIconProvider
    ) {
       //$mdThemingProvider.theme('default').primaryPalette('indigo');
@@ -28,11 +28,12 @@
            .accentPalette('deep-orange')
            .warnPalette('red');
 
-      hljsServiceProvider.setOptions({
-         // replace tab with 4 spaces
-         tabReplace: '    '
-      });
+      // hljsServiceProvider.setOptions({
+      //    classPrefix: 'ivonet-',
+      //    tabReplace: '    '
+      // });
 
+      ivoMarkdownConfigProvider.hljsOptions({classPrefix: 'ivonet-mm-', tabreplace: '    '});
       ivoMarkdownConfigProvider.config({
          tables: true,
          parseImgDimensions: true,

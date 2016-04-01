@@ -1,0 +1,149 @@
+/*
+
+Original style from softwaremaniacs.org (c) Ivan Sagalaev <Maniac@SoftwareManiacs.Org>
+
+*/
+
+.hljs {
+    background: #212121;
+    color: whitesmoke;
+}
+
+pre code {
+  display: block; padding: 0.5em;
+  background-color: #212121;
+}
+
+pre code,
+pre .ivonet-mm-subst,
+pre .ivonet-mm-tag .ivonet-mm-title,
+pre .ivonet-mm-lisp .ivonet-mm-title,
+pre .ivonet-mm-clojure .ivonet-mm-built_in,
+pre .ivonet-mm-nginx .ivonet-mm-title {
+  color: black;
+}
+
+pre .ivonet-mm-string {
+    color: #8aad46;
+}
+pre .ivonet-mm-title,
+pre .ivonet-mm-constant,
+pre .ivonet-mm-parent,
+pre .ivonet-mm-tag .ivonet-mm-value,
+pre .ivonet-mm-rules .ivonet-mm-value,
+pre .ivonet-mm-rules .ivonet-mm-value .ivonet-mm-number,
+pre .ivonet-mm-preprocessor,
+pre .ivonet-mm-ruby .ivonet-mm-symbol,
+pre .ivonet-mm-ruby .ivonet-mm-symbol .ivonet-mm-string,
+pre .ivonet-mm-aggregate,
+pre .ivonet-mm-template_tag,
+pre .ivonet-mm-django .ivonet-mm-variable,
+pre .ivonet-mm-smalltalk .ivonet-mm-class,
+pre .ivonet-mm-addition,
+pre .ivonet-mm-flow,
+pre .ivonet-mm-stream,
+pre .ivonet-mm-bash .ivonet-mm-variable,
+pre .ivonet-mm-apache .ivonet-mm-tag,
+pre .ivonet-mm-apache .ivonet-mm-cbracket,
+pre .ivonet-mm-tex .ivonet-mm-command,
+pre .ivonet-mm-tex .ivonet-mm-special,
+pre .ivonet-mm-erlang_repl .ivonet-mm-function_or_atom,
+pre .ivonet-mm-ivonet-mm-markdown .ivonet-mm-ivonet-mm-header {
+  color: #CBAD50;
+}
+
+pre .ivonet-mm-comment,
+pre .ivonet-mm-annotation,
+pre .ivonet-mm-template_comment,
+pre .ivonet-mm-diff .ivonet-mm-header,
+pre .ivonet-mm-chunk,
+pre .ivonet-mm-markdown .ivonet-mm-blockquote {
+  color: #888;
+}
+
+pre .ivonet-mm-number,
+pre .ivonet-mm-date,
+pre .ivonet-mm-regexp,
+pre .ivonet-mm-literal,
+pre .ivonet-mm-smalltalk .ivonet-mm-symbol,
+pre .ivonet-mm-smalltalk .ivonet-mm-char,
+pre .ivonet-mm-go .ivonet-mm-constant,
+pre .ivonet-mm-change,
+pre .ivonet-mm-markdown .ivonet-mm-bullet,
+pre .ivonet-mm-markdown .ivonet-mm-link_url {
+  color: #080;
+}
+
+pre .ivonet-mm-label,
+pre .ivonet-mm-javadoc,
+pre .ivonet-mm-ruby .ivonet-mm-string,
+pre .ivonet-mm-decorator,
+pre .ivonet-mm-filter .ivonet-mm-argument,
+pre .ivonet-mm-localvars,
+pre .ivonet-mm-array,
+pre .ivonet-mm-attr_selector,
+pre .ivonet-mm-important,
+pre .ivonet-mm-pseudo,
+pre .ivonet-mm-pi,
+pre .ivonet-mm-doctype,
+pre .ivonet-mm-deletion,
+pre .ivonet-mm-envvar,
+pre .ivonet-mm-shebang,
+pre .ivonet-mm-apache .ivonet-mm-sqbracket,
+pre .ivonet-mm-nginx .ivonet-mm-built_in,
+pre .ivonet-mm-tex .ivonet-mm-formula,
+pre .ivonet-mm-erlang_repl .ivonet-mm-reserved,
+pre .ivonet-mm-prompt,
+pre .ivonet-mm-markdown .ivonet-mm-link_label,
+pre .ivonet-mm-vhdl .ivonet-mm-attribute,
+pre .ivonet-mm-clojure .ivonet-mm-attribute,
+pre .ivonet-mm-coffeescript .ivonet-mm-property {
+  color: #88F
+}
+
+pre .ivonet-mm-params {
+    color: ghostwhite;
+}
+pre .ivonet-mm-keyword{
+    color: #B96120;
+}
+pre .ivonet-mm-keyword,
+pre .ivonet-mm-id,
+pre .ivonet-mm-phpdoc,
+pre .ivonet-mm-title,
+pre .ivonet-mm-built_in,
+pre .ivonet-mm-aggregate,
+pre .ivonet-mm-css .ivonet-mm-tag,
+pre .ivonet-mm-javadoctag,
+pre .ivonet-mm-phpdoc,
+pre .ivonet-mm-yardoctag,
+pre .ivonet-mm-smalltalk .ivonet-mm-class,
+pre .ivonet-mm-winutils,
+pre .ivonet-mm-bash .ivonet-mm-variable,
+pre .ivonet-mm-apache .ivonet-mm-tag,
+pre .ivonet-mm-go .ivonet-mm-typename,
+pre .ivonet-mm-tex .ivonet-mm-command,
+pre .ivonet-mm-markdown .ivonet-mm-strong,
+pre .ivonet-mm-request,
+pre .ivonet-mm-status {
+  font-weight: bold;
+}
+
+pre .ivonet-mm-markdown .ivonet-mm-emphasis {
+  font-style: italic;
+}
+
+pre .ivonet-mm-nginx .ivonet-mm-built_in {
+  font-weight: normal;
+}
+
+pre .ivonet-mm-coffeescript .ivonet-mm-javascript,
+pre .ivonet-mm-javascript .ivonet-mm-xml,
+pre .ivonet-mm-tex .ivonet-mm-formula,
+pre .ivonet-mm-xml .ivonet-mm-javascript,
+pre .ivonet-mm-xml .ivonet-mm-vbscript,
+pre .ivonet-mm-xml .ivonet-mm-css,
+pre .ivonet-mm-xml .ivonet-mm-cdata {
+  opacity: 0.5;
+}
+

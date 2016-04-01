@@ -37,21 +37,6 @@ function runTests(singleRun, done) {
 
 }
 
-var Server = require('karma').Server;
-
-/**
- * Run test once and exit
- */
-gulp.task('test2', function (done) {
-   new Server({
-      configFile: __dirname + '/../karma.conf.js',
-      singleRun: true
-   }, done).start();
-});
-
-/**
- * Run test once and exit
- */
 gulp.task('test', function (done) {
    runTests(true /* singleRun */, done)
 });
