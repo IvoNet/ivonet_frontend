@@ -16,7 +16,6 @@
       vm.title = "Home";
       vm.description = 'This app contains a lot iv IvoNet stuff';
       vm.keywords = 'AngularJs,Java,Javascript,fun';
-      logger.info('loaded Dashboard');
 
       
       vm.content = "# Python code\n\n```python\n\nimport IvoNet\n\ndef hello():\n    print 'hello world'\n```\n\n```python\n\nimport IvoNet\n\ndef hello():\n    print 'hello world'\n```\n```html\n<div class=\"foo\"><p>text</p></div>\n```\n\n## header 2\nand some normal text here\n\n* bullet 1\n* bullet *italic* 2\n    * indented bullet in **bold**\n\n|Markdown | Less | Pretty |\n|---: | --: | ---: |\n|*Still* | `renders` | **nicely**|\n|1 | 2 | 3|\n\nThis is a @ivonet tweet\n\nthis is ~~deleted text~~\n### header 3";
@@ -34,6 +33,7 @@
          Config.getBliki()
       };
 
+      
       vm.toggleSideBar = function () {
          $mdSidenav('left').toggle()
                .then(function () {
@@ -54,6 +54,9 @@
                         logger.info("open sidebar is done");
                      });
       };
+
+      logger.info('loaded Dashboard');
+
    }
 })();
 

@@ -2,33 +2,48 @@
     display: inline-flex;
 }
 
-
 .very-heigh {
     min-height: 200%;
 }
 
-md-content p {
-  font-size: 1.2em;
+md-content {
+    font-size: 1.3em;
 }
 
-//pre code {
-//    background-color: #000;
-//}
-
 md-content h1 {
-    background-color: #B6C8D2;
+    background-color: #26A69A;
     color: #000;
     font-size: 2em;
+    padding: 5px;
 }
 
 md-content h2 {
-    background-color: #EAF0F3;
+    background-color: #4DB6AC;
     color: #000;
     font-size: 1.7em;
+    padding: 3px;
 }
 
 md-content h3 {
-    background-color: #F9F9F9;
+    background-color: #80CBC4;
     color: #000;
     font-size: 1.5em;
+    padding: 2px;
+}
+
+@media screen and (max-width: 435px) {
+    md-content {
+        font-size: 1em;
+    }
+    md-content h1 {
+        font-size: 1.5em;
+    }
+
+    md-content h2 {
+        font-size: 1.3em;
+    }
+
+    md-content h3 {
+        font-size: 1.2em;
+    }
 }

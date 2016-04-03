@@ -7,11 +7,13 @@ Original style from softwaremaniacs.org (c) Ivan Sagalaev <Maniac@SoftwareManiac
 .hljs {
     background: #212121;
     color: whitesmoke;
+    font-size: 1.2em;
 }
 
 pre code {
-  display: block; padding: 0.5em;
-  background-color: #212121;
+    display: block;
+    padding: 0.5em;
+    background-color: #212121;
 }
 
 pre code,
@@ -20,12 +22,13 @@ pre .ivonet-mm-tag .ivonet-mm-title,
 pre .ivonet-mm-lisp .ivonet-mm-title,
 pre .ivonet-mm-clojure .ivonet-mm-built_in,
 pre .ivonet-mm-nginx .ivonet-mm-title {
-  color: black;
+    color: black;
 }
 
 pre .ivonet-mm-string {
     color: #8aad46;
 }
+
 pre .ivonet-mm-title,
 pre .ivonet-mm-constant,
 pre .ivonet-mm-parent,
@@ -49,7 +52,7 @@ pre .ivonet-mm-tex .ivonet-mm-command,
 pre .ivonet-mm-tex .ivonet-mm-special,
 pre .ivonet-mm-erlang_repl .ivonet-mm-function_or_atom,
 pre .ivonet-mm-ivonet-mm-markdown .ivonet-mm-ivonet-mm-header {
-  color: #CBAD50;
+    color: #CBAD50;
 }
 
 pre .ivonet-mm-comment,
@@ -58,7 +61,7 @@ pre .ivonet-mm-template_comment,
 pre .ivonet-mm-diff .ivonet-mm-header,
 pre .ivonet-mm-chunk,
 pre .ivonet-mm-markdown .ivonet-mm-blockquote {
-  color: #888;
+    color: #888;
 }
 
 pre .ivonet-mm-number,
@@ -71,7 +74,7 @@ pre .ivonet-mm-go .ivonet-mm-constant,
 pre .ivonet-mm-change,
 pre .ivonet-mm-markdown .ivonet-mm-bullet,
 pre .ivonet-mm-markdown .ivonet-mm-link_url {
-  color: #080;
+    color: #080;
 }
 
 pre .ivonet-mm-label,
@@ -98,16 +101,20 @@ pre .ivonet-mm-markdown .ivonet-mm-link_label,
 pre .ivonet-mm-vhdl .ivonet-mm-attribute,
 pre .ivonet-mm-clojure .ivonet-mm-attribute,
 pre .ivonet-mm-coffeescript .ivonet-mm-property {
-  color: #88F
+    color: #88F
 }
 
 pre .ivonet-mm-params {
     color: ghostwhite;
 }
-pre .ivonet-mm-keyword{
+
+pre .ivonet-mm-name,
+pre .ivonet-mm-keyword {
     color: #B96120;
 }
+
 pre .ivonet-mm-keyword,
+pre .ivonet-mm-name,
 pre .ivonet-mm-id,
 pre .ivonet-mm-phpdoc,
 pre .ivonet-mm-title,
@@ -126,15 +133,15 @@ pre .ivonet-mm-tex .ivonet-mm-command,
 pre .ivonet-mm-markdown .ivonet-mm-strong,
 pre .ivonet-mm-request,
 pre .ivonet-mm-status {
-  font-weight: bold;
+    font-weight: bold;
 }
 
 pre .ivonet-mm-markdown .ivonet-mm-emphasis {
-  font-style: italic;
+    font-style: italic;
 }
 
 pre .ivonet-mm-nginx .ivonet-mm-built_in {
-  font-weight: normal;
+    font-weight: normal;
 }
 
 pre .ivonet-mm-coffeescript .ivonet-mm-javascript,
@@ -144,6 +151,11 @@ pre .ivonet-mm-xml .ivonet-mm-javascript,
 pre .ivonet-mm-xml .ivonet-mm-vbscript,
 pre .ivonet-mm-xml .ivonet-mm-css,
 pre .ivonet-mm-xml .ivonet-mm-cdata {
-  opacity: 0.5;
+    opacity: 0.5;
 }
 
+@media screen and (max-width: 435px) {
+    .hljs {
+        font-size: 1em;
+    }
+}

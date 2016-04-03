@@ -4,13 +4,13 @@
 <meta view-head name="keywords" content="{{dash.keywords}}">
 
 
-<section layout="row" flex>
+<section layout="row" flex layout-fill>
     <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left"
-                md-is-locked-open="$mdMedia('gt-md')" >
+                md-is-locked-open="$mdMedia('gt-sm')">
 
         <md-toolbar class="md-whiteframe-glow-z2 md-default-theme md-whiteframe-z1">
             <h1 class="md-toolbar-tools">
-                <md-button hide-gt-md ng-click="dash.closeSideBar()" class="md-icon-button md-default-theme"
+                <md-button hide-gt-sm ng-click="dash.closeSideBar()" class="md-icon-button md-default-theme hide-gt-sm"
                            aria-label="Close sidebar">
                     <md-icon md-svg-src="close" class="white-icon "></md-icon>
                 </md-button>
@@ -18,7 +18,6 @@
                     <ivo-wolf-logo></ivo-wolf-logo>
                     <div class="logotype">IvoNet - {{viewTitle}}</div>
                 </md-button>
-
             </h1>
             <span flex></span>
         </md-toolbar>
@@ -33,14 +32,14 @@
     <!-- Main content -->
     <div layout="column" layout-fill>
         <md-toolbar class="md-whiteframe-z1">
-            <div class="md-toolbar-tools ">
-                <md-button class="md-icon-button md-default-theme" hide-gt-md aria-label="Toggle Menu"
+            <div class="md-toolbar-tools">
+                <md-button class="md-icon-button md-default-theme" hide-gt-sm aria-label="Toggle Menu"
                            ng-click="dash.openSideBar()">
                     <md-icon md-svg-src="menu" class="white-icon"></md-icon>
                 </md-button>
                 <span flex></span>
                 <!--<md-button class="md-icon-button md-default-theme" aria-label="Bliki" ng-href="#/bliki">-->
-                    <!--<md-icon md-svg-src="edit" class="white-icon"></md-icon>-->
+                <!--<md-icon md-svg-src="edit" class="white-icon"></md-icon>-->
                 <!--</md-button>-->
             </div>
         </md-toolbar>
