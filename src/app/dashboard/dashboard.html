@@ -9,7 +9,7 @@
                 md-is-locked-open="$mdMedia('gt-sm')">
 
         <md-toolbar class="md-whiteframe-glow-z2 md-default-theme md-whiteframe-z1">
-            <h1 class="md-toolbar-tools" >
+            <h1 class="md-toolbar-tools">
                 <md-button hide-gt-sm ng-click="dash.closeSideBar()" class="md-icon-button md-default-theme hide-gt-sm"
                            aria-label="Close sidebar">
                     <md-icon md-svg-src="close" class="white-icon "></md-icon>
@@ -21,8 +21,15 @@
             </h1>
             <span flex></span>
         </md-toolbar>
-        <md-content layout-padding>
-
+        <md-content role="navigation">
+            <md-menu-content>
+                <md-menu-item ng-repeat="folder in dash.menu.folders" ng-click="dash.selectedFolderMenuItem(folder)">
+                    {{ folder.key }}
+                </md-menu-item>
+                <md-menu-item ng-repeat="item in dash.menu.browseFiles" ng-click="dash.selectedFileMenuItem(item)">
+                    {{ item.key }}
+                </md-menu-item>
+            </md-menu-content>
         </md-content>
     </md-sidenav>
 

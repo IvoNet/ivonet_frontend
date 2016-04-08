@@ -12,19 +12,29 @@
 
       return {
          getMenu: getRootMenu,
-         getContent: getContent
+         getSubmenu: getSubmenu,
+         getContent: getMenuContent
       };
 
       function getRootMenu() {
          return $http({
             method: 'GET',
-            url: Config.getBliki()
+            url: Config.getBliki(),
+            cached: true
          })
               .then(sendResponseData)
               .catch(sendGetBooksError)
       }
 
-      function getContent(url) {
+      function getSubmenu(url) {
+         return $http({
+            method: 'GET',
+            url: url
+         })
+              .then(sendResponseData)
+              .catch(sendGetBooksError)
+      }
+      function getMenuContent(url) {
          return $http({
             method: 'GET',
             url: url
@@ -34,6 +44,7 @@
       }
 
       function sendResponseData(response) {
+         console.log("responsedata: " + angular.toJson(response.data));
          return response.data;
       }
 
